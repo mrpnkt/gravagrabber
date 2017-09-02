@@ -2,7 +2,7 @@
 
 Retrieve a gravatar image dynamically from any e-mail address. 
 
-gravagrabber_min.html is a minimized version that runs in any modern browser.
+Download all files and open gravagrabber.html in any modern browser.
 
 ## Credits
 
