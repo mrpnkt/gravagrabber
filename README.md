@@ -1,5 +1,6 @@
 # gravagrabber
-grab gravatar images from email
+
+Retrieve a gravatar image dynamically from any e-mail address. 
 
 ## Credits
 
