@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Gravagrabber 0.1</title>
+
+        <script type="text/javascript" src="jquery.min.js"></script>
+        <script type="text/javascript" src="jquery.gravatar.js"></script>
+        <script type="text/javascript" src="md5.js"></script>
+
+        <script type="text/javascript">
+(function($){$.gravatar=function(emailAddress,overrides){var options=$.extend({size:'512',rating:'',image:'',secure:true,classes:''},overrides);var baseUrl=options.secure?'https://secure.gravatar.com/avatar/':'http://www.gravatar.com/avatar/';return $('<img src="'+baseUrl+hex_md5(emailAddress)+'.jpg?'+(options.size?'s='+options.size+'&':'')+(options.rating?'r='+options.rating+'&':'')+(options.image?'d='+encodeURIComponent(options.image):'')+'"'+(options.classes?' class="'+options.classes+'"':'')+' />').bind('error',function(){$(this).remove()})}})(jQuery);
+        $(document).ready(function()
+        {
+        	var inputBox = document.getElementById('gremail');
+			inputBox.onkeyup = function(){
+            $('#gravatar').empty().append($.gravatar(inputBox.value));
+        	}
+        });
+        </script>
+    <style>
+    	html { margin: 0; padding: 0; height: 100%; }
+ no-repeat bottom right; height: auto;}
+    	h1 { color: #0a76b7; }
+    	input { margin: 0 1em 1em 0; font-size: large; padding: 0.3em; }  
+    </style>	
+    </head>
+    <body>
+    <h1>Gravagrabber 0.1</h1>
+   	<h2>Type or paste email and get the associated gravatar:</h2>
+    <form id="gremailform">
+    	<input type='text' name='gremail' class='gremail' id='gremail'>
+        <div id="gravatar">...</div>
+    </form>    
+    </body>
+</html>
